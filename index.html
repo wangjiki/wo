@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{padding:0;margin:0;}
+		p{width: 400px;font-size:30px;margin:auto;}
+		input{width:100px;height:50px;font-size:30px;margin: auto;display:block;}
+		.wrap{margin:auto;overflow: hidden;width:600px;height: 600px;border:1px solid black;}
+		.wrap>img{margin:5px;border-radius:5px;background-size: 100%;display: block;float: left;}
+		span{width: 77px;display: inline-block;margin-right: 50px;}
+		strong{width: 30px;display: inline-block;text-align: center;}
+	</style>
+</head>
+<body>
+	<p>剩余时间：<span>60.00</span>第 <strong></strong> 关</p>
+	<input type="button" value="start">
+	<div class="wrap"></div>
+</body>
+<script type="text/javascript">
+	 var btn=document.querySelector("input");
+	 var wrap=document.querySelector("wrap");
+	 var time=document.querySelector("span");
+	 vaer level=document.querySelector("strong");
+	 var timer=null;
+	 var bol=false;
+	 var index;
+	 btn.onclick=function(){
+	 	if(bol){
+	 		return ;
+	 	}
+	 	bol=true;
+	 	var clock=60;
+	 	timer=setInterval(function(){
+	 		clock-=5/100;
+	 		if(clock<=0){
+	 			clearInterval(timer);
+	 			clock=0;
+	 			bol=false;
+	 		}
+	 		timer.innerText=clock.toFixed(2);
+	 	},50)
+	 	create();
+	 }
+	 function create(){
+          for(var i=0;i<index*index;i++){
+          	var img=document.createElement("img");
+          	img.src="img/1.png";
+          	img.style.width=(wrap.clientWidth-index*10)/index+"px";
+          	wrap.appedChild(img);
+          }
+          run();
+	 }
+	 function ran(){
+	 	var img=document
+	 }
+
+</script>
+
+</html>
